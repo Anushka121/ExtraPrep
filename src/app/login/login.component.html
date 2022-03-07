@@ -1,0 +1,43 @@
+<div class="boostraper-wrapper">
+    <div class="container ">
+     
+        <div class="row form-all" style="margin-top: 10px">
+            <mat-card>
+            <div class="col-md-12">
+                <div class="container text-center">
+                    <img src="../../assets/RegsiterLogo.png" height="100" width="100">
+                </div>
+            <h1 class="text-center">Login!!</h1>
+            
+            <form class="text-center " #myForm ="ngForm" (ngSubmit)="myForm.valid && formSubmit(myForm)">  
+                   <!--username-->
+                    <mat-form-field appearance="fill" class="full-width">
+                      <mat-label>UserName</mat-label>
+                      <input
+                      [(ngModel)]="loginDetails.username"
+                      name="username"
+                       matInput placeholder="User Name" required>
+                       <mat-hint>Must be Unique</mat-hint>
+                    </mat-form-field><br>
+                    <!--Password-->
+                    <mat-form-field appearance="fill" class="full-width">
+                        <mat-label>Password</mat-label>
+                        <input
+                        [(ngModel)]="loginDetails.password"
+                        name="password"
+                        type="password"  matInput placeholder="Password" required>
+                      </mat-form-field>
+                      <br>
+                      <!--Button-->
+                      <div class="container">
+                        <button type="submit" class="margin" mat-raised-button color="warn">Login</button>
+                        <button  mat-raised-button color="accent" (click)="clear(myForm)" >Close</button>
+                      </div>
+             </form>
+            
+        </div>
+    </mat-card>
+        </div>
+    
+    </div>
+</div>

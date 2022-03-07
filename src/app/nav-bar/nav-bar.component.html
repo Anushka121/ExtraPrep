@@ -1,0 +1,31 @@
+   <nav class="navbar navbar-expand-lg " style="background-color:coral ;">
+    
+     <a href=""> <img src="../../assets/extra.png" height="70" width="70" ></a>
+    <span>E᙭Tᖇᗩ✓ᑭᖇEᑭ</span>
+
+    <span class="example-spacer"></span>
+    <div style="background-color: aliceblue; font-size: xx-large;">
+      🅐🅒🅔 🅣🅗🅔 🅢🅤🅒🅒🅔🅢🅢
+    </div>
+    <span class="example-spacer"></span>
+    <a 
+    *ngIf="!login.isLoggedIn()"
+    style="color: black;" class="mr20" href="/login">
+      <mat-icon>login</mat-icon>Login 
+    </a>
+    
+    <a 
+    *ngIf="!login.isLoggedIn()"
+     style="color: black;" href="/signup" class="mr20 ">
+      <mat-icon>how_to_reg</mat-icon>Register 
+    </a>
+
+   
+    
+    <a (click)="logout()"
+     *ngIf="login.isLoggedIn()"
+    style="color: black; cursor: pointer;" class="mr20" >
+      <mat-icon>logout</mat-icon> Logout
+    </a>
+    <button mat-raised-button style="margin-right: 50px;" *ngIf="isLoggedIn  && user "> Hi!! {{ user.username }} <mat-icon>person </mat-icon></button>
+</nav>
